@@ -1,0 +1,10 @@
+out_to_x no
+out_to_console yes
+background no
+update_interval 2
+total_run_times 0
+short_units yes
+
+TEXT
+# ^fg(lightblue)${moc_artist} - ${moc_song}^fg()^ca()
+ ^i(/home/halo/Documents/icons/dzen2/note.xpm) ${if_existing /home/halo/.moc/socket2}^ca(1, x-terminal-emulator -e mocp)^fg(lightblue)${moc_artist} - ${moc_song} (${moc_album})^fg()^ca()${else}^fg(lightblue)MOC is not running^fg()${endif}^fg(red) ││ ^fg()^i(/home/halo/Documents/icons/dzen2/computer.xpm) Host: ${nodename}, up ${uptime}^fg()^fg(red) ││ ^fg()^fg(lightblue)^i(/home/halo/Documents/icons/dzen2/cpu.xpm) CPU: ${cpu 0}%^fg()^fg(red) ││ ^ca(1, x-terminal-emulator -e htop)^fg() ^i(/home/halo/Documents/icons/dzen2/memory.xpm) Mem: ${membar 1 1} (${mem}/${memmax} (${memperc}%))^ca()^fg(red) ││ ^fg()^fg(lightblue)^i(/home/halo/Documents/icons/dzen2/battery.xpm) Bat: ${battery_percent BAT1}% ${if_match "${acpiacadapter ADP1}" == "on-line"}(ac)${else}(no ac)${endif}^fg()^fg(red) ││ ^fg()^ca(1, gsimplecal)^i(/home/halo/Documents/icons/dzen2/clock.xpm) ${time %a %h %d, %H:%M}^ca()^fg(red) ││ ^fg()   
