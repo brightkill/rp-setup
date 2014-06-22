@@ -1,9 +1,10 @@
 #!/bin/bash
+# script for background setting. Requires feh.
 
 restfile="$HOME/.config/setbg"
 file="$1"
 
-if [ "${file}" = "-r" ] || [ "${file}" = "--restore" ]; then
+if [ "$1" = "-r" ] || [ "$1" = "--restore" ]; then
     sh "${restfile}"
     exit $?
 fi

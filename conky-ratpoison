@@ -1,3 +1,0 @@
-#!/bin/sh
-
-conky -c ~/.config/conky/conkyrc.rp | dzen2 -bg black -h 14 -fn "Terminus:size=8" -ta r -e "button3=lower;key_b=togglehide"

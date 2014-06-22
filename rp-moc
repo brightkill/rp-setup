@@ -1,2 +1,0 @@
-#!/bin/sh
-ratmenu -style dreary -font "-*-terminus-*-*-*-*-*-*-*-*-*-*-iso10646-1 " "play/pause" "mocp -G" "next" "mocp --next" "previous" "mocp --previous" "stop" "mocp --stop" "open moc" "x-terminal-emulator -e mocp"
