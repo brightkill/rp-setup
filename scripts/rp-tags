@@ -1,0 +1,3 @@
+#!/bin/sh
+(echo -n ratmenu -style dreary -io `rpws current`  -align center -font "-*-terminus-*-*-*-*-*-*-*-*-*-*-iso10646-1 ";
+for i in `seq 1 9`; do echo -n "\"Workspace $i\"" "\"rpws $i\" "; done) | sh

@@ -1,0 +1,12 @@
+XXkb.mainwindow.type: top
+XXkb.mainwindow.geometry: 16x14+1345+0
+!XXkb.mainwindow.image.1: /home/halo/Documents/flags/us.xpm
+!XXkb.mainwindow.image.2: /home/halo/Documents/flags/ru.xpm
+XXkb.mainwindow.label.enable: yes
+XXkb.mainwindow.label.font: -*-terminus-*-*-*-*-*-*-*-*-*-*-iso10646-1
+XXkb.mainwindow.label.text.1: En
+XXkb.mainwindow.label.text.2: Ru
+! XXkb.mainwindow.label.background: #005F87
+XXkb.mainwindow.label.background: #000000
+XXkb.mainwindow.label.foreground: #87ffff
+
