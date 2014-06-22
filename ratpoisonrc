@@ -11,8 +11,8 @@ set font Terminus:style=bold:size=14
 exec /usr/bin/rpws init 9 -k
 
 # aliases
-alias grid exec ratpoison -c "select -" -c "only" -c "hsplit" -c next -c "vsplit" -c next -c "focusright" -c next -c "vsplit" -c "next"
-alias xpaste meta S-Insert
+alias grid exec ratpoison -c "select -" -c "only" -c "hsplit" -c next -c "vsplit" -c next -c "focusright" -c next -c "vsplit" -c "next" || exit 0
+alias yank meta S-Insert
 alias colonterm colon exec x-terminal-emulator -e
 alias execterm exec x-terminal-emulator -e
 alias togglebarhide exec xdotool key --window $(xdotool search --class dzen) b
@@ -26,6 +26,9 @@ unbind 5
 unbind 6
 unbind 7
 unbind 8
+unbind C-w
+unbind f
+unbind C-f
 
 # applications
 bind I colonterm sudo apt-get install 
@@ -37,6 +40,8 @@ bind F11 execterm mocp
 bind F12 execterm mc
 bind H execterm htop
 bind C execterm vim ~/.ratpoisonrc
+bind 8 exec rp-moc
+
 
 # wm bindings
 bind k delete
@@ -45,12 +50,17 @@ bind 0 remove
 bind 1 only
 bind 2 vsplit
 bind 3 hsplit
+bind 4 exec ratpoison -c delete -c remove
+bind backslash hsplit
+bind bar hsplit
+bind minus vsplit
+bind underscore vsplit
 bind o focus
 bind O focusprev
 bind R restart
 bind M-r source /home/halo/.ratpoisonrc
 bind C-y getsel
-bind y xpaste
+bind y yank
 bind 9 exec
 bind semicolon colonterm  
 bind F1 exec rpws 1
@@ -68,8 +78,8 @@ bind bracketright focus
 bind bracketleft focusprev
 bind C-bracketright focus
 bind C-bracketleft focusprev
-bind C-comma rpwsp
-bind C-period rpwsn
+bind P rpwsp
+bind N rpwsn
 bind T title
 bind w fselect
 bind L windows
@@ -77,4 +87,4 @@ bind C-s focuslast
 bind Tab exec rp-windows
 bind M-Tab exec rp-tags
 bind B togglebarhide
-bind backslash exec rp-moc
+bind W swap
